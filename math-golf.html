@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Math Golf</title>
+  </head>
+  <body>
+    <center>
+      <div style="max-width: 800px">
+        <!-- Title and instructions -->
+
+        <div>
+          <h1>Math Golf Game</h1>
+          <p>
+            This framework-free version was created for the Recurse Center
+            application
+          </p>
+          <p>
+            If you'd like to play a more exciting round of Math Golf, please
+            visit https://math-golf.vercel.app/
+          </p>
+          <p>Thanks for playing! -Joyce Lai</p>
+          <hr />
+          <h2>How to play:</h2>
+          <p>
+            Use the mystery buttons to get from the current number to the target
+            number.
+          </p>
+          <p>You have to figure out what the buttons do.</p>
+          <p>Do it in the fewest steps possible.</p>
+        </div>
+        <p>Click a button below to start!</p>
+
+        <!-- Game engine -->
+
+        <script src="math-golf.js"></script>
+        <div>
+          <div style="border: 3px solid #73ad21; margin: 10px">
+            <button
+              onClick="calcCurrentNum(-2)"
+              style="background-color: green; color: white; margin: 5px"
+            >
+              Button 1</button
+            ><button
+              onClick="calcCurrentNum(3)"
+              style="background-color: red; color: white; margin: 10px"
+            >
+              Button 2
+            </button>
+            <h3>Current Number:</h3>
+            <div id="current_num" style="margin: 10px">?</div>
+
+            <h3>Target Number:</h3>
+            <div id="target_num" style="margin: 10px">?</div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Result -->
+        
+        <div>
+          <h2>You have used this many steps:</h2>
+          <h1 id="num_steps">0</h1>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
